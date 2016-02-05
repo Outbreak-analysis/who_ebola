@@ -24,4 +24,4 @@ urllist <- str_extract(chuck,"201[0-9]{5}")
 urllist <- na.omit(urllist)
 
 
-for(i in urllist[1]){get_dat(i)}
+for(i in urllist){get_dat(i)}
