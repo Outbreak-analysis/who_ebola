@@ -25,6 +25,9 @@ source:	source.R
 ebola_dl.Rout:	source temp.txt ebola_dl.R
 		R CMD BATCH ebola_dl.R
 
+ebola_summary_dl.Rout:	source temp.txt ebola_summary_dl.R
+			R CMD BATCH ebola_dl.R
+
 
 ######################################################################
 
