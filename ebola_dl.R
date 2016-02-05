@@ -19,8 +19,9 @@ get_dat <- function(yy){
 
 
 sources <- readLines("temp.txt")
-chuck <- sources[148:430]
+chuck <- sources[148:length(sources)]
 urllist <- str_extract(chuck,"201[0-9]{5}")
+urllist <- na.omit(urllist)
 
 
 for(i in urllist){get_dat(i)}
