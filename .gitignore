@@ -1,5 +1,13 @@
 *.csv
 .*
+*.Rlog
+*.[r]
+*.RData
+*.Rout
+*.rout
+*.pdf
+
+
 
 makestuff/
 local.mk

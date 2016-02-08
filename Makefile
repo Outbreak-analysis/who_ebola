@@ -18,13 +18,13 @@ include stuff.mk
 
 ## Content
 
-Sources += source.R
+Sources += $(wildcard *.R)
 
 source.Rout:	source.R
 		$(run-R)
 
 ebola_dl.Rout:	source.Rout ebola_dl.R
-		S(run-R)
+		$(run-R)
 
 ebola_summary_dl.Rout:	source.Rout ebola_summary_dl.R
 			$(run-R)
@@ -40,5 +40,5 @@ ebola_summary_dl.Rout:	source.Rout ebola_summary_dl.R
 -include $(ms)/git.mk
 -include $(ms)/visual.mk
 
-# -include $(ms)/wrapR.mk
-# -include $(ms)/oldlatex.mk
+-include $(ms)/wrapR.mk
+-include $(ms)/oldlatex.mk
