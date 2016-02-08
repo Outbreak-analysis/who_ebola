@@ -1,8 +1,9 @@
 # who_ebola
+
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: notarget
+target pngtarget pdftarget vtarget acrtarget: Makefile
 
 ##################################################################
 
@@ -19,14 +20,14 @@ include stuff.mk
 
 Sources += source.R
 
-source:	source.R
-	R CMD BATCH source.R
+source.Rout:	source.R
+		$(run-R)
 
-ebola_dl.Rout:	source temp.txt ebola_dl.R
-		R CMD BATCH ebola_dl.R
+ebola_dl.Rout:	source.Rout ebola_dl.R
+		S(run-R)
 
-ebola_summary_dl.Rout:	source temp.txt ebola_summary_dl.R
-			R CMD BATCH ebola_summary_dl.R
+ebola_summary_dl.Rout:	source.Rout ebola_summary_dl.R
+			$(run-R)
 
 
 ######################################################################
