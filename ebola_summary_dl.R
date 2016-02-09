@@ -23,5 +23,6 @@ chuck <- sources[148:length(sources)]
 urllist <- str_extract(chuck,"201[0-9]{5}")
 urllist <- na.omit(urllist)
 
+urllist <- head(urllist,sample)
 
 for(i in urllist){get_dat(i)}
