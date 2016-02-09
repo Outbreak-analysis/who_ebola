@@ -26,13 +26,13 @@ source.Rout:	source.R
 ebola_dl.Rout:	source.Rout ebola_dl.R
 		$(run-R)
 
-ebola_dl_sample.Rout:	source.Rout ebola_dl.R sample.R
+ebola_dl_sample.Rout:	source.Rout sample.R ebola_dl.R
 			$(run-R)
 
 ebola_summary_dl.Rout:	source.Rout ebola_summary_dl.R
 			$(run-R)
 
-ebola_summary_dl_sample.Rout:	source.Rout ebola_summary_dl.R sample.R
+ebola_summary_dl_sample.Rout:	source.Rout sample.R ebola_summary_dl.R
 				$(run-R)
 
 
